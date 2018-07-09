@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>org.quickstart</groupId>
+		<artifactId>quickstart-dependencies</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>quickstart-dependencies</relativePath>
+	</parent>
+
+	<!-- <parent> -->
+	<!-- <groupId>org.apache</groupId> -->
+	<!-- <artifactId>apache</artifactId> -->
+	<!-- <version>18</version> -->
+	<!-- </parent> -->
+
+	<!-- <parent> -->
+	<!-- <groupId>org.sonatype.oss</groupId> -->
+	<!-- <artifactId>oss-parent</artifactId> -->
+	<!-- <version>7</version> -->
+	<!-- </parent> -->
+
+	<modelVersion>4.0.0</modelVersion>
+	<inceptionYear>2015</inceptionYear>
+	<artifactId>quickstart-all</artifactId>
+	<packaging>pom</packaging>
+	<name>quickstart-all ${project.version}</name>
+	<url>http://yangziliang.quickstart.org/</url>
+
+	<prerequisites>
+		<maven>3.2.5</maven>
+	</prerequisites>
+
+	<scm>
+		<url>https://git-wip-us.apache.org/repos/asf/incubator-rocketmq.git</url>
+		<connection>scm:git:https://git-wip-us.apache.org/repos/asf/incubator-rocketmq.git</connection>
+		<developerConnection>scm:git:https://git-wip-us.apache.org/repos/asf/incubator-rocketmq.git
+        </developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<mailingLists>
+		<mailingList>
+			<name>Development List</name>
+			<subscribe>dev-subscribe@rocketmq.incubator.apache.org</subscribe>
+			<unsubscribe>dev-unsubscribe@rocketmq.incubator.apache.org</unsubscribe>
+			<post>dev@rocketmq.incubator.apache.org</post>
+		</mailingList>
+		<mailingList>
+			<name>User List</name>
+			<subscribe>users-subscribe@rocketmq.incubator.apache.org</subscribe>
+			<unsubscribe>users-unsubscribe@rocketmq.incubator.apache.org</unsubscribe>
+			<post>users@rocketmq.incubator.apache.org</post>
+		</mailingList>
+		<mailingList>
+			<name>Commits List</name>
+			<subscribe>commits-subscribe@rocketmq.incubator.apache.org</subscribe>
+			<unsubscribe>commits-unsubscribe@rocketmq.incubator.apache.org</unsubscribe>
+			<post>commits@rocketmq.incubator.apache.org</post>
+		</mailingList>
+	</mailingLists>
+
+	<developers>
+		<developer>
+			<id>yangziliang</id>
+			<name>yangziliang</name>
+			<roles>
+				<role>architect</role>
+				<role>committer</role>
+			</roles>
+			<email>youngzil@apache.org</email>
+			<url>https://github.com/youngzil</url>
+			<timezone>+8</timezone>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Apache Software Foundation</name>
+		<url>http://www.apache.org</url>
+	</organization>
+
+	<issueManagement>
+		<system>jira</system>
+		<url>https://issues.apache.org/jira/browse/RocketMQ</url>
+	</issueManagement>
+
+	<repositories>
+		<!-- Maven依赖查询：http://mvnrepository.com/ http://search.maven.org/ -->
+		<repository>
+			<id>alimaven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>central</id>
+			<name>central maven</name>
+			<url>http://central.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>central-repo</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo1</id>
+			<name>repo1 maven</name>
+			<url>https://repo1.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>repo2</id>
+			<name>repo2 maven</name>
+			<url>http://repo2.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>jboss-public-repository-group2</id>
+			<name>JBoss Public Maven Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>sonatype-nexus-releases</id>
+			<name>Sonatype Nexus Releases</name>
+			<url>https://oss.sonatype.org/content/repositories/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>sonatype</id>
+			<name>sonatype Maven Repository</name>
+			<url>http://repository.sonatype.org/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>Alfresco</id>
+			<name>Alfresco Public</name>
+			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>uk</id>
+			<name>uk maven</name>
+			<url>http://uk.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>spring-milestone</id>
+			<name>Spring Milestone</name>
+			<url>http://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>spring-snapshot</id>
+			<name>Spring Snapshot</name>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>rabbit-milestone</id>
+			<name>Rabbit Milestone</name>
+			<url>https://dl.bintray.com/rabbitmq/maven-milestones</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>clojars.org</id>
+			<url>http://clojars.org/repo</url>
+		</repository>
+
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<test.java.version>1.8</test.java.version>
+		<apache.commons.lang3.version>3.6</apache.commons.lang3.version>
+		<!-- Maven properties -->
+
+		<!-- -DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。 -->
+		<!-- -Dmaven.test.skip=true，不执行测试用例，也不编译测试用例类。 -->
+		<maven.test.skip>true</maven.test.skip>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<!-- URL of the ASF SonarQube server -->
+		<sonar.host.url>https://builds.apache.org/analysis</sonar.host.url>
+		<!-- Exclude all generated code -->
+		<sonar.exclusions>file:**/generated-sources/**</sonar.exclusions>
+
+	</properties>
+
+	<!-- <outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory> -->
+	<build>
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.5</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.10</version>
+					<configuration>
+						<downloadSources>true</downloadSources>
+						<forceRecheck>true</forceRecheck>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>3.8</version>
+					<executions>
+						<execution>
+							<phase>verify</phase>
+							<goals>
+								<goal>pmd</goal>
+								<goal>cpd</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<linkXref>true</linkXref>
+						<minimumTokens>100</minimumTokens>
+						<targetJdk>${source.version}</targetJdk>
+						<verbose>true</verbose>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>findbugs-maven-plugin</artifactId>
+					<version>3.0.5</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.3.0.603</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.6.1</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+						<compilerVersion>${java.version}</compilerVersion>
+						<optimize>true</optimize>
+						<showDeprecation>true</showDeprecation>
+						<showWarnings>true</showWarnings>
+					</configuration>
+					<executions>
+						<execution>
+							<id>default-testCompile</id>
+							<phase>process-test-sources</phase>
+							<goals>
+								<goal>testCompile</goal>
+							</goals>
+							<configuration>
+								<fork>true</fork>
+								<source>${test.java.version}</source>
+								<target>${test.java.version}</target>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>3.0.1</version>
+					<configuration>
+						We are not suppose to setup the customer resources here
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.10.4</version>
+					<configuration>
+						<charset>UTF-8</charset>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>2.2</version>
+					<executions>
+						<execution>
+							<id>generate-effective-dependencies-pom</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>effective-pom</goal>
+							</goals>
+							<configuration>
+								<output>${project.build.directory}/effective-pom/effective-dependencies.xml</output>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>1.4.1</version>
+					<executions>
+						<execution>
+							<id>enforce-ban-circular-dependencies</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<rules>
+							<banCircularDependencies/>
+						</rules>
+						<fail>true</fail>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>extra-enforcer-rules</artifactId>
+							<version>1.0-beta-4</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>2.17</version>
+					<executions>
+						<execution>
+							<id>verify</id>
+							<phase>verify</phase>
+							<configuration>
+								<configLocation>style/rmq_checkstyle.xml</configLocation>
+								<encoding>UTF-8</encoding>
+								<consoleOutput>true</consoleOutput>
+								<failsOnError>true</failsOnError>
+								<includeTestSourceDirectory>false</includeTestSourceDirectory>
+							</configuration>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.rat</groupId>
+					<artifactId>apache-rat-plugin</artifactId>
+					<version>0.12</version>
+					<configuration>
+						<excludes>
+							<exclude>.travis.yml</exclude>
+							<exclude>CONTRIBUTING.md</exclude>
+							<exclude>bin/README.md</exclude>
+						</excludes>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eluder.coveralls</groupId>
+					<artifactId>coveralls-maven-plugin</artifactId>
+					<version>4.3.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.7.8</version>
+					<executions>
+						<execution>
+							<id>default-prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+							<configuration>
+								<destFile>${project.build.directory}/jacoco.exec</destFile>
+							</configuration>
+						</execution>
+						<execution>
+							<id>default-prepare-agent-integration</id>
+							<phase>pre-integration-test</phase>
+							<goals>
+								<goal>prepare-agent-integration</goal>
+							</goals>
+							<configuration>
+								<destFile>${project.build.directory}/jacoco-it.exec</destFile>
+								<propertyName>failsafeArgLine</propertyName>
+							</configuration>
+						</execution>
+						<execution>
+							<id>default-report</id>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>default-report-integration</id>
+							<goals>
+								<goal>report-integration</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.19.1</version>
+					<configuration>
+						<properties>
+							<property>
+								<name>listener</name>
+								<value>org.redisson.RedissonTestRunListener</value>
+							</property>
+						</properties>
+						<forkCount>1</forkCount>
+						<reuseForks>true</reuseForks>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.1</version>
+
+					<configuration>
+						We are not suppose to setup the customer resources here
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>2.11</version>
+					<configuration>
+						<header>${basedir}/header.txt</header>
+						<quiet>false</quiet>
+						<failIfMissing>true</failIfMissing>
+						<aggregate>false</aggregate>
+						<includes>
+							<include>src/main/java/org/redisson/</include>
+						</includes>
+						<excludes>
+							<exclude>target/**</exclude>
+						</excludes>
+						<useDefaultExcludes>true</useDefaultExcludes>
+						<mapping>
+							<java>JAVADOC_STYLE</java>
+						</mapping>
+						<strictCheck>true</strictCheck>
+						<useDefaultMapping>true</useDefaultMapping>
+						<encoding>UTF-8</encoding>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>check</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.3</version>
+					<configuration>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>jdk8</id>
+			<activation>
+				<jdk>[1.8,)</jdk>
+			</activation>
+			<!-- Disable doclint under JDK 8 -->
+			<reporting>
+				<plugins>
+					<plugin>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.10.4</version>
+						<configuration>
+							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
+					</plugin>
+				</plugins>
+			</reporting>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.10.4</version>
+						<configuration>
+							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>release-sign-artifacts</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>release-all</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>2.6</version>
+						<configuration>
+							<finalName>apache-rocketmq</finalName>
+							<descriptors>
+								<descriptor>release.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>release-client</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<configuration>
+							<finalName>apache-rocketmq</finalName>
+							<descriptors>
+								<descriptor>release-client.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>it-test</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-failsafe-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<forkCount>1</forkCount>
+							<reuseForks>true</reuseForks>
+							<argLine>@{failsafeArgLine}</argLine>
+							<excludes>
+								<exclude>**/NormalMsgDelayIT.java</exclude>
+								<exclude>**/BroadCastNormalMsgNotRecvIT.java</exclude>
+								<exclude>**/TagMessageWithSameGroupConsumerIT.java</exclude>
+								<exclude>**/AsyncSendWithMessageQueueSelectorIT.java</exclude>
+								<exclude>**/AsyncSendWithMessageQueueIT.java</exclude>
+							</excludes>
+						</configuration>
+						<executions>
+							<execution>
+								<goals>
+									<goal>integration-test</goal>
+									<goal>verify</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons.lang3.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<modules>
+		<module>quickstart-akka</module>
+		<module>quickstart-asm</module>
+		<module>quickstart-beam</module>
+		<module>quickstart-cache</module>
+		<module>quickstart-code</module>
+		<module>quickstart-config</module>
+		<module>quickstart-container</module>
+		<module>quickstart-data</module>
+		<module>quickstart-database</module>
+		<module>quickstart-design-pattern</module>
+		<module>quickstart-document</module>
+		<module>quickstart-druid</module>
+		<module>quickstart-druid-io</module>
+		<module>quickstart-elastic-job</module>
+		<module>quickstart-example</module>
+		<module>quickstart-fastdfs</module>
+		<module>quickstart-framework</module>
+		<module>quickstart-front</module>
+		<module>quickstart-gateway</module>
+		<module>quickstart-groovy</module>
+		<module>quickstart-http</module>
+		<module>quickstart-javase</module>
+		<module>quickstart-javase9</module>
+		<module>quickstart-jfinal</module>
+		<module>quickstart-jvm-serializer</module>
+		<module>quickstart-kotlin</module>
+		<module>quickstart-linux</module>
+		<module>quickstart-logging</module>
+		<module>quickstart-machine-learning</module>
+		<module>quickstart-microservices</module>
+		<module>quickstart-mnemonic</module>
+		<module>quickstart-modular</module>
+		<module>quickstart-monitor</module>
+		<module>quickstart-mq</module>
+		<module>quickstart-nanomsg</module>
+		<module>quickstart-netflix</module>
+		<module>quickstart-openstack</module>
+		<module>quickstart-otter</module>
+		<module>quickstart-pouch</module>
+		<module>quickstart-proguard</module>
+		<module>quickstart-proxy</module>
+		<module>quickstart-remoting</module>
+		<module>quickstart-rpc</module>
+		<module>quickstart-samza</module>
+		<module>quickstart-scala</module>
+		<module>quickstart-sofa</module>
+		<module>quickstart-servicecomb</module>
+		<module>quickstart-spring</module>
+		<module>quickstart-spring-boot</module>
+		<module>quickstart-spring-cloud</module>
+		<module>quickstart-spring-data</module>
+		<module>quickstart-spring-framework</module>
+		<module>quickstart-spring-integration</module>
+		<module>quickstart-spring-integration-kafka</module>
+		<module>quickstart-spring-security</module>
+		<module>quickstart-test</module>
+		<module>quickstart-tools</module>
+		<module>quickstart-web</module>
+		<!-- sorted -->
+    <module>quickstart-register</module>
+  </modules>
+</project>

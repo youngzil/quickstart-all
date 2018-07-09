@@ -1,0 +1,1 @@
+1、pom中的plugins的作用
