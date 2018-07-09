@@ -754,12 +754,7 @@
 		<module>quickstart-akka</module>
 		<module>quickstart-asm</module>
 		<module>quickstart-beam</module>
-		<module>quickstart-cache</module>
 		<module>quickstart-code</module>
-		<module>quickstart-config</module>
-		<module>quickstart-container</module>
-		<module>quickstart-data</module>
-		<module>quickstart-database</module>
 		<module>quickstart-design-pattern</module>
 		<module>quickstart-document</module>
 		<module>quickstart-druid</module>
@@ -767,13 +762,8 @@
 		<module>quickstart-elastic-job</module>
 		<module>quickstart-example</module>
 		<module>quickstart-fastdfs</module>
-		<module>quickstart-framework</module>
-		<module>quickstart-front</module>
-		<module>quickstart-gateway</module>
 		<module>quickstart-groovy</module>
-		<module>quickstart-http</module>
 		<module>quickstart-javase</module>
-		<module>quickstart-javase9</module>
 		<module>quickstart-jfinal</module>
 		<module>quickstart-jvm-serializer</module>
 		<module>quickstart-kotlin</module>
@@ -782,34 +772,21 @@
 		<module>quickstart-machine-learning</module>
 		<module>quickstart-microservices</module>
 		<module>quickstart-mnemonic</module>
-		<module>quickstart-modular</module>
-		<module>quickstart-monitor</module>
-		<module>quickstart-mq</module>
 		<module>quickstart-nanomsg</module>
-		<module>quickstart-netflix</module>
 		<module>quickstart-openstack</module>
 		<module>quickstart-otter</module>
 		<module>quickstart-pouch</module>
 		<module>quickstart-proguard</module>
 		<module>quickstart-proxy</module>
-		<module>quickstart-remoting</module>
-		<module>quickstart-rpc</module>
 		<module>quickstart-samza</module>
 		<module>quickstart-scala</module>
-		<module>quickstart-sofa</module>
 		<module>quickstart-servicecomb</module>
 		<module>quickstart-spring</module>
-		<module>quickstart-spring-boot</module>
-		<module>quickstart-spring-cloud</module>
-		<module>quickstart-spring-data</module>
 		<module>quickstart-spring-framework</module>
 		<module>quickstart-spring-integration</module>
 		<module>quickstart-spring-integration-kafka</module>
 		<module>quickstart-spring-security</module>
-		<module>quickstart-test</module>
-		<module>quickstart-tools</module>
 		<module>quickstart-web</module>
 		<!-- sorted -->
-    <module>quickstart-register</module>
   </modules>
 </project>
