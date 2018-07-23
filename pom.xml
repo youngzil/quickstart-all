@@ -271,6 +271,10 @@
 	</repositories>
 
 	<properties>
+		<!-- 第一个1为主版本号，第二个1为子版本号，第三个1为阶段版本号，第四部分为日期版本号加希腊字母版本号，分别为：beta、release。例如：1.1.1.051021_beta -->
+		<publish.mode>-SNAPSHOT</publish.mode>
+		<current.version>0.0.1${publish.mode}</current.version>
+
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -438,7 +442,7 @@
 					</executions>
 					<configuration>
 						<rules>
-							<banCircularDependencies/>
+							<banCircularDependencies />
 						</rules>
 						<fail>true</fail>
 					</configuration>
