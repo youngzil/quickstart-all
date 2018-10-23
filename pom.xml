@@ -103,6 +103,8 @@
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
 			</snapshots>
 		</repository>
 
@@ -280,7 +282,7 @@
 		<java.version>1.8</java.version>
 		<test.java.version>1.8</test.java.version>
 		<apache.commons.lang3.version>3.6</apache.commons.lang3.version>
-		<JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home</JAVA_HOME>
+		<JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home</JAVA_HOME>
 		<!-- Maven properties -->
 
 		<!-- -DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。 -->
@@ -580,7 +582,7 @@
 				<plugin>
 					<groupId>com.mycila</groupId>
 					<artifactId>license-maven-plugin</artifactId>
-					<version>2.11</version>
+					<version>3.0</version>
 					<configuration>
 						<header>${basedir}/header.txt</header>
 						<quiet>false</quiet>
@@ -610,9 +612,11 @@
 				</plugin>
 
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>2.3</version>
+					<version>3.2.2</version>
 					<configuration>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
 
