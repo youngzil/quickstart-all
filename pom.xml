@@ -24,7 +24,7 @@
 	<inceptionYear>2015</inceptionYear>
 	<artifactId>quickstart-all</artifactId>
 	<packaging>pom</packaging>
-	<name>quickstart-all ${project.version}</name>
+	<name>quickstart-all-${project.version}</name>
 	<url>http://yangziliang.quickstart.org/</url>
 
 	<prerequisites>
@@ -100,6 +100,172 @@
 			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+		
+		<repository>
+			<id>alimaven-public</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-central</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/central</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-releases</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/releases</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-spring</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/spring</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-spring-plugin</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/spring-plugin</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-google</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/google</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-jcenter</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/jcenter</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-gradle-plugin</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/gradle-plugin</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-snapshots</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/snapshots</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-grails-core</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/grails-core</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>alimaven-apache-snapshots</id>
+			<name>aliyun maven</name>
+			<url>https://maven.aliyun.com/repository/apache-snapshots</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
@@ -295,7 +461,25 @@
 		<!-- Exclude all generated code -->
 		<sonar.exclusions>file:**/generated-sources/**</sonar.exclusions>
 
+		<lombok.version>1.18.4</lombok.version>
+
 	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
 
 	<!-- <outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory> -->
 	<build>
