@@ -95,24 +95,10 @@
 	<repositories>
 		<!-- Maven依赖查询：http://mvnrepository.com/ http://search.maven.org/ -->
 		<repository>
-			<id>alimaven</id>
-			<name>aliyun maven</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-				<checksumPolicy>fail</checksumPolicy>
-			</snapshots>
-		</repository>
-		
-		<repository>
 			<id>alimaven-public</id>
 			<name>aliyun maven</name>
 			<url>https://maven.aliyun.com/repository/public</url>
+			<!-- <url>http://maven.aliyun.com/nexus/content/groups/public/</url> -->
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>always</updatePolicy>
