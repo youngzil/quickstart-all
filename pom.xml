@@ -94,6 +94,7 @@
 
 	<repositories>
 		<!-- Maven依赖查询：http://mvnrepository.com/ http://search.maven.org/ -->
+		<!-- https://maven.aliyun.com -->
 		<repository>
 			<id>alimaven-public</id>
 			<name>aliyun maven</name>
@@ -266,9 +267,12 @@
 			<url>http://central.maven.org/maven2/</url>
 			<releases>
 				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
 			</snapshots>
 		</repository>
 
