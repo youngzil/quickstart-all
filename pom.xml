@@ -5,7 +5,7 @@
 		<groupId>org.quickstart</groupId>
 		<artifactId>quickstart-dependencies</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>quickstart-dependencies</relativePath>
+		<relativePath>../quickstart-dependencies</relativePath>
 	</parent>
 
 	<!-- <parent> -->
@@ -25,7 +25,7 @@
 	<artifactId>quickstart-all</artifactId>
 	<packaging>pom</packaging>
 	<name>quickstart-all-${project.version}</name>
-	<url>http://yangziliang.quickstart.org/</url>
+	<url>https://yangziliang.quickstart.org/</url>
 
 	<prerequisites>
 		<maven>3.2.5</maven>

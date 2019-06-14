@@ -7,7 +7,7 @@
  * ${return_type}
  * ${tags}
  * @Exception
- * @author：yangzl@asiainfo.com
+ * @author：youngzil@163.com
  * @${date} ${time} 
  */</template><template autoinsert="true" context="overridecomment_context" deleted="false" description="Comment for overriding methods" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.overridecomment" name="overridecomment">/* (non-Javadoc)
  * ${see_to_overridden}
@@ -16,7 +16,7 @@
  */</template><template autoinsert="false" context="typecomment_context" deleted="false" description="Comment for created types" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.typecomment" name="typecomment">/**&#13;
  * ${type_name} &#13;
  *  &#13;
- * @author：yangzl@asiainfo.com&#13;
+ * @author：youngzil@163.com&#13;
  * @${date} ${time} &#13;
  * @version 2.0&#13;
  */</template><template autoinsert="true" context="delegatecomment_context" deleted="false" description="Comment for delegate methods" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.delegatecomment" name="delegatecomment">/**
@@ -31,7 +31,7 @@
  * 文件名：${file_name}
  * 版本信息：
  * 日期：${date}
- * Copyright asiainfo Corporation ${year}
+ * Copyright yangzl Corporation ${year}
  * 版权所有 *
  */</template><template autoinsert="true" context="settercomment_context" deleted="false" description="Comment for setter method" enabled="true" id="org.eclipse.jdt.ui.text.codetemplates.settercomment" name="settercomment">/**
  * @param ${param} the ${bare_field_name} to set
@@ -41,7 +41,7 @@
  * @Description: 
  * ${tags} ${return_type}
  * @Exception
- * @author：yangzl@asiainfo.com
+ * @author：youngzil@163.com
  * @${date} ${time} 
  */</template>
  </templates>
