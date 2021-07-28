@@ -31,7 +31,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home</JAVA_HOME>
+        <JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home</JAVA_HOME>
         <!-- Maven properties -->
 
         <!-- -DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。 -->
@@ -152,12 +152,6 @@
                 <groupId>com.google.inject</groupId>
                 <artifactId>guice</artifactId>
                 <version>${guice.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
             </dependency>
 
             <dependency>
