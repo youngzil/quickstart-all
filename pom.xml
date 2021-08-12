@@ -47,6 +47,7 @@
 
         <lombok.version>1.18.20</lombok.version>
         <junit.version>4.13.2</junit.version>
+        <junit5.version>5.7.2</junit5.version>
 
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-collections4.version>4.4</commons-collections4.version>
@@ -60,7 +61,10 @@
         <hutool.version>5.7.7</hutool.version>
         <netty.version>4.1.66.Final</netty.version>
 
+        <slf4j.version>1.7.32</slf4j.version>
         <logback.version>1.2.5</logback.version>
+        <log4j2.version>2.14.1</log4j2.version>
+        <log4j.version>1.2.17</log4j.version>
 
         <activemq.version>5.16.0</activemq.version>
         <jafka.version>3.0.6</jafka.version>
@@ -69,6 +73,15 @@
         <rabbitmq.version>5.13.0</rabbitmq.version>
         <rocketmq.version>4.9.0</rocketmq.version>
 
+        <jcache.version>1.1.1</jcache.version>
+        <jetcache.version>2.6.0</jetcache.version>
+        <caffeine.version>3.0.3</caffeine.version>
+        <jodis.version>0.5.1</jodis.version>
+        <ehcache.version>3.9.5</ehcache.version>
+        <hazelcast.version>4.2.1</hazelcast.version>
+        <redisson.version>3.16.1</redisson.version>
+        <jedis.version>3.6.3</jedis.version>
+        <lettuce.version>6.1.4.RELEASE</lettuce.version>
     </properties>
 
     <dependencies>
@@ -88,6 +101,14 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit5.version}</version>
+                <scope>test</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.jdk</groupId>
                 <artifactId>tools</artifactId>
@@ -97,10 +118,11 @@
             </dependency>
 
             <dependency>
-                <groupId>com.lmax</groupId>
-                <artifactId>disruptor</artifactId>
-                <version>${disruptor.version}</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
@@ -108,21 +130,9 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>easyexcel</artifactId>
-                <version>${easyexcel.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${hutool.version}</version>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
             </dependency>
 
             <dependency>
@@ -132,14 +142,9 @@
             </dependency>
 
             <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-access</artifactId>
-                <version>${logback.version}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
             </dependency>
 
             <dependency>
@@ -158,6 +163,64 @@
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>${gson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-access</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-web</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-client</artifactId>
+                <version>${activemq.version}</version>
             </dependency>
 
             <dependency>
@@ -183,7 +246,6 @@
                 <artifactId>rocketmq-client</artifactId>
                 <version>${rocketmq.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-tools</artifactId>
@@ -191,11 +253,64 @@
             </dependency>
 
             <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>${netty.version}</version>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${jcache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alicp.jetcache</groupId>
+                <artifactId>jetcache-anno</artifactId>
+                <version>${jetcache.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alicp.jetcache</groupId>
+                <artifactId>jetcache-redis</artifactId>
+                <version>${jetcache.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>3.0.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.codis.jodis</groupId>
+                <artifactId>jodis</artifactId>
+                <version>${jodis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${hazelcast.version}</version>
+            </dependency>
+
+            <!-- redisson 1.x相关类的包路径是org.redisson.core. ,15年停止更新， redisson 2.x和3.x的相关类的包路径是org.redisson.api，2.x需要JDK 1.6+ compatible，3.x需要JDK 1.8+ compatible -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.lettuce</groupId>
+                <artifactId>lettuce-core</artifactId>
+                <version>${lettuce.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
@@ -213,7 +328,7 @@
                     <source>${java.version}</source><!-- 源代码使用的JDK版本 -->
                     <target>${java.version}</target> <!-- 需要生成的目标class文件的编译版本 -->
                     <encoding>${project.build.sourceEncoding}</encoding><!-- 字符集编码，防止中文乱码 -->
-<!--                    <skipTests>true</skipTests>&lt;!&ndash; 跳过测试 &ndash;&gt;-->
+                    <!--                    <skipTests>true</skipTests>&lt;!&ndash; 跳过测试 &ndash;&gt;-->
                     <skip></skip>
                     <verbose>true</verbose>
                     <showWarnings>true</showWarnings>
@@ -223,8 +338,9 @@
                     <!-- 这下面的是可选项 -->
                     <meminitial>128m</meminitial><!-- 编译器使用的初始内存 -->
                     <maxmem>512m</maxmem><!-- 编译器使用的最大内存 -->
-                    <compilerArgument>-verbose -bootclasspath ${java.home}\lib\rt.jar</compilerArgument><!-- 这个选项用来传递编译器自身不包含但是却支持的参数选项 -->
-<!--                    <compilerArgument>-parameters</compilerArgument>-->
+                    <compilerArgument>-verbose -bootclasspath ${java.home}\lib\rt.jar
+                    </compilerArgument><!-- 这个选项用来传递编译器自身不包含但是却支持的参数选项 -->
+                    <!--                    <compilerArgument>-parameters</compilerArgument>-->
                 </configuration>
             </plugin>
 
@@ -268,7 +384,7 @@
                     <configuration>
                         <!--            We are not suppose to setup the customer resources here-->
                         <!--            <encoding>${project.build.sourceEncoding}</encoding>-->
-<!--                        <escapeString>\</escapeString>-->
+                        <!--                        <escapeString>\</escapeString>-->
                         <attach>true</attach>
                     </configuration>
                     <executions>
