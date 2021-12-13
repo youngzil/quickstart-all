@@ -47,7 +47,7 @@
 
         <lombok.version>1.18.22</lombok.version>
         <junit.version>4.13.2</junit.version>
-        <junit5.version>5.8.1</junit5.version>
+        <junit5.version>5.8.2</junit5.version>
 
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-collections4.version>4.4</commons-collections4.version>
@@ -63,25 +63,25 @@
         <commons-compress.version>1.21</commons-compress.version>
 
         <disruptor.version>3.4.4</disruptor.version>
-        <easyexcel.version>2.2.11</easyexcel.version>
+        <easyexcel.version>3.0.5</easyexcel.version>
         <guava.version>31.0.1-jre</guava.version>
-        <hutool.version>5.7.13</hutool.version>
+        <hutool.version>5.7.17</hutool.version>
         <sensitive.version>0.0.13</sensitive.version>
         <hppc.version>0.9.0</hppc.version>
         <jctools.version>3.3.0</jctools.version>
         <jol.version>0.16</jol.version>
         <oshi.version>5.8.2</oshi.version>
-        <netty.version>4.1.68.Final</netty.version>
+        <netty.version>4.1.71.Final</netty.version>
 
         <guice.version>5.0.1</guice.version>
         <reflections.version>0.10.1</reflections.version>
         <asm.version>9.2</asm.version>
         <cglib.version>3.3.0</cglib.version>
         <javassist.version>3.28.0-GA</javassist.version>
-        <bytebuddy.version>1.11.19</bytebuddy.version>
+        <bytebuddy.version>1.12.3</bytebuddy.version>
 
         <fastjson.version>1.2.78</fastjson.version>
-        <gson.version>2.8.8</gson.version>
+        <gson.version>2.8.9</gson.version>
         <json-lib.version>2.4</json-lib.version>
         <json.version>20210307</json.version>
 
@@ -94,28 +94,28 @@
         <yamlbeans.version>1.14</yamlbeans.version>
 
         <slf4j.version>1.7.32</slf4j.version>
-        <logback.version>1.2.6</logback.version>
-        <log4j2.version>2.14.1</log4j2.version>
+        <logback.version>1.2.7</logback.version>
+        <log4j2.version>2.15.0</log4j2.version>
         <log4j.version>1.2.17</log4j.version>
 
         <activemq.version>5.16.3</activemq.version>
         <jafka.version>3.0.6</jafka.version>
         <kafka.scala.version>2.13</kafka.scala.version>
         <kafka.version>3.0.0</kafka.version>
-        <rabbitmq.version>5.13.1</rabbitmq.version>
-        <rocketmq.version>4.9.1</rocketmq.version>
-        <pulsar.version>2.8.1</pulsar.version>
+        <rabbitmq.version>5.14.0</rabbitmq.version>
+        <rocketmq.version>4.9.2</rocketmq.version>
+        <pulsar.version>2.9.0</pulsar.version>
         <openmessaging.version>2.2.1-pubsub</openmessaging.version>
 
         <jcache.version>1.1.1</jcache.version>
         <jetcache.version>2.6.0</jetcache.version>
-        <caffeine.version>3.0.3</caffeine.version>
+        <caffeine.version>3.0.5</caffeine.version>
         <jodis.version>0.5.1</jodis.version>
         <ehcache.version>3.9.5</ehcache.version>
         <hazelcast.version>4.2.1</hazelcast.version>
         <redisson.version>3.16.1</redisson.version>
         <jedis.version>3.6.3</jedis.version>
-        <lettuce.version>6.1.4.RELEASE</lettuce.version>
+        <lettuce.version>6.1.5.RELEASE</lettuce.version>
 
         <reactive.version>1.0.3</reactive.version>
         <reactor.version>3.4.10</reactor.version>
