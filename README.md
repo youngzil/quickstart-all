@@ -3,7 +3,7 @@ https://github.com/youngzil/quickstart-all
 
 
 >开发环境打包
-> mvn -DskipTests clean install -U
+> mvn clean install -U -DskipTests
 >
 
 
