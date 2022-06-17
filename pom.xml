@@ -79,7 +79,7 @@
         <javassist.version>3.28.0-GA</javassist.version>
         <bytebuddy.version>1.12.8</bytebuddy.version>
 
-        <fastjson.version>1.2.80</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <gson.version>2.9.0</gson.version>
         <json-lib.version>2.4</json-lib.version>
         <json.version>20220320</json.version>
