@@ -31,7 +31,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home</JAVA_HOME>
+        <JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk1.8.0_331.jdk/Contents/Home</JAVA_HOME>
         <!-- Maven properties -->
 
         <!-- -DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。 -->
@@ -45,7 +45,7 @@
         <sonar.exclusions>file:**/generated-sources/**</sonar.exclusions>
 
         <!-- 2022-04-07更新 -->
-        <lombok.version>1.18.22</lombok.version>
+        <lombok.version>1.18.24</lombok.version>
         <junit5.version>5.8.2</junit5.version>
 
         <commons-lang3.version>3.12.0</commons-lang3.version>
@@ -62,24 +62,24 @@
         <commons-compress.version>1.21</commons-compress.version>
 
         <disruptor.version>3.4.4</disruptor.version>
-        <easyexcel.version>3.0.5</easyexcel.version>
+        <easyexcel.version>3.1.1</easyexcel.version>
         <guava.version>31.1-jre</guava.version>
-        <hutool.version>5.7.22</hutool.version>
+        <hutool.version>5.8.3</hutool.version>
         <sensitive.version>0.0.13</sensitive.version>
         <hppc.version>0.9.1</hppc.version>
         <jctools.version>3.3.0</jctools.version>
         <jol.version>0.16</jol.version>
-        <oshi.version>6.1.5</oshi.version>
-        <netty.version>4.1.75.Final</netty.version>
+        <oshi.version>6.1.6</oshi.version>
+        <netty.version>4.1.78.Final</netty.version>
 
         <guice.version>5.1.0</guice.version>
         <reflections.version>0.10.2</reflections.version>
         <asm.version>9.3</asm.version>
         <cglib.version>3.3.0</cglib.version>
         <javassist.version>3.28.0-GA</javassist.version>
-        <bytebuddy.version>1.12.8</bytebuddy.version>
+        <bytebuddy.version>1.12.10</bytebuddy.version>
 
-        <fastjson.version>1.2.80</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <gson.version>2.9.0</gson.version>
         <json-lib.version>2.4</json-lib.version>
         <json.version>20220320</json.version>
@@ -99,36 +99,44 @@
         <activemq.version>5.17.0</activemq.version>
         <jafka.version>3.0.6</jafka.version>
         <kafka.scala.version>2.13</kafka.scala.version>
-        <kafka.version>3.1.0</kafka.version>
+        <kafka.version>3.2.0</kafka.version>
         <rabbitmq.version>5.14.2</rabbitmq.version>
         <rocketmq.version>4.9.3</rocketmq.version>
-        <pulsar.version>2.9.2</pulsar.version>
+        <pulsar.version>2.10.0</pulsar.version>
         <openmessaging.version>2.2.1-pubsub</openmessaging.version>
 
         <jcache.version>1.1.1</jcache.version>
         <jetcache.version>2.6.2</jetcache.version>
-        <caffeine.version>3.0.6</caffeine.version>
+        <caffeine.version>3.1.1</caffeine.version>
         <jodis.version>0.5.1</jodis.version>
         <ehcache.version>3.10.0</ehcache.version>
         <hazelcast.version>5.1.1</hazelcast.version>
         <redisson.version>3.17.0</redisson.version>
-        <jedis.version>4.2.1</jedis.version>
+        <jedis.version>4.2.3</jedis.version>
         <lettuce.version>6.1.8.RELEASE</lettuce.version>
 
         <reactive.version>1.0.3</reactive.version>
         <reactor.version>3.4.16</reactor.version>
         <rxjava.version>1.3.8</rxjava.version>
         <rxjava2.version>2.2.21</rxjava2.version>
-        <rxjava3.version>3.1.4</rxjava3.version>
+        <rxjava3.version>3.1.5</rxjava3.version>
 
         <!-- HTTP client-->
         <okhttp2.version>2.7.5</okhttp2.version>
         <okhttp3.version>3.14.9</okhttp3.version>
-        <okhttp3.version>4.9.3</okhttp3.version>
-        <unirest.version>1.4.9</unirest.version>
+        <okhttp3.version>4.10.0</okhttp3.version>
+        <unirest1.version>1.4.9</unirest1.version>
+        <unirest.version>3.13.10</unirest.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
         <httpclient.version>4.5.13</httpclient.version>
         <openfeign.version>11.8</openfeign.version>
+
+        <mysql.version>8.0.29</mysql.version>
+        <hikaricp.version>5.0.1</hikaricp.version>
+        <rocksdb.version>7.3.1</rocksdb.version>
+        <h2.version>2.1.214</h2.version>
+        <derby.version>10.16.1.1</derby.version>
+        <sqlite.version>3.36.0.3</sqlite.version>
 
     </properties>
 
@@ -351,6 +359,7 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
@@ -606,6 +615,22 @@
             <dependency>
                 <groupId>com.mashape.unirest</groupId>
                 <artifactId>unirest-java</artifactId>
+                <version>${unirest1.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.konghq</groupId>
+                <artifactId>unirest-java</artifactId>
+                <version>${unirest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.konghq</groupId>
+                <artifactId>unirest-objectmapper-jackson</artifactId>
+                <version>${unirest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.konghq</groupId>
+                <artifactId>unirest-object-mappers-gson</artifactId>
                 <version>${unirest.version}</version>
             </dependency>
 
@@ -639,6 +664,47 @@
                 <version>${openfeign.version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.rocksdb</groupId>
+                <artifactId>rocksdbjni</artifactId>
+                <version>${rocksdb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derby</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derbyclient</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.xerial</groupId>
+                <artifactId>sqlite-jdbc</artifactId>
+                <version>${sqlite.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
