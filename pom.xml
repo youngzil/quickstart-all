@@ -111,7 +111,7 @@
         <caffeine.version>3.1.1</caffeine.version>
         <jodis.version>0.5.1</jodis.version>
         <ehcache.version>3.10.2</ehcache.version>
-        <hazelcast.version>5.2.0</hazelcast.version>
+        <hazelcast.version>5.3.0</hazelcast.version>
         <redisson.version>3.17.7</redisson.version>
         <jedis.version>4.3.1</jedis.version>
         <lettuce.version>6.2.1.RELEASE</lettuce.version>
