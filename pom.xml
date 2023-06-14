@@ -63,7 +63,7 @@
 
         <disruptor.version>3.4.4</disruptor.version>
         <easyexcel.version>3.1.1</easyexcel.version>
-        <guava.version>31.1-jre</guava.version>
+        <guava.version>32.0.0-jre</guava.version>
         <hutool.version>5.8.9</hutool.version>
         <sensitive.version>0.0.15</sensitive.version>
         <hppc.version>0.9.1</hppc.version>
