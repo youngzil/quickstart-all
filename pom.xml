@@ -135,7 +135,7 @@
         <mysql.version>8.0.31</mysql.version>
         <hikaricp.version>5.0.1</hikaricp.version>
         <rocksdb.version>7.7.3</rocksdb.version>
-        <h2.version>2.1.214</h2.version>
+        <h2.version>2.2.220</h2.version>
         <derby.version>10.16.1.1</derby.version>
         <sqlite.version>3.39.3.0</sqlite.version>
 
