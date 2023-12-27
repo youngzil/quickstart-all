@@ -118,14 +118,10 @@
 
         <reactive.version>1.0.4</reactive.version>
         <reactor.version>3.6.1</reactor.version>
-        <rxjava.version>1.3.8</rxjava.version>
-        <rxjava2.version>2.2.21</rxjava2.version>
         <rxjava3.version>3.1.8</rxjava3.version>
 
         <!-- HTTP client-->
-        <okhttp.version>2.7.5</okhttp.version>
         <okhttp3.version>4.12.0</okhttp3.version>
-        <unirest1.version>1.4.9</unirest1.version>
         <unirest.version>3.14.5</unirest.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
         <httpclient.version>4.5.14</httpclient.version>
@@ -582,13 +578,13 @@
             <dependency>
                 <groupId>io.reactivex</groupId>
                 <artifactId>rxjava</artifactId>
-                <version>${rxjava.version}</version>
+                <version>1.3.8</version>
             </dependency>
 
             <dependency>
                 <groupId>io.reactivex.rxjava2</groupId>
                 <artifactId>rxjava</artifactId>
-                <version>${rxjava2.version}</version>
+                <version>2.2.21</version>
 
             </dependency>
 
@@ -614,20 +610,20 @@
             <dependency>
                 <groupId>com.squareup.okhttp</groupId>
                 <artifactId>okhttp</artifactId>
-                <version>${okhttp.version}</version>
+                <version>2.7.5</version>
             </dependency>
 
             <dependency>
                 <groupId>com.squareup.okhttp</groupId>
                 <artifactId>mockwebserver</artifactId>
-                <version>${okhttp.version}</version>
+                <version>2.7.5</version>
                 <scope>test</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.mashape.unirest</groupId>
                 <artifactId>unirest-java</artifactId>
-                <version>${unirest1.version}</version>
+                <version>1.4.9</version>
             </dependency>
 
             <dependency>
