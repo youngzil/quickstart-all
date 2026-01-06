@@ -18,7 +18,7 @@
     <inceptionYear>2015</inceptionYear>
     <groupId>org.quickstart</groupId>
     <artifactId>quickstart-all</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}-${project.version}</name>
     <url>https://yangziliang.quickstart.org/</url>
@@ -30,8 +30,8 @@
         <current.version>0.0.1${publish.mode}</current.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-        <JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home</JAVA_HOME>
+        <java.version>21</java.version>
+        <JAVA_HOME>/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home</JAVA_HOME>
         <!-- Maven properties -->
 
         <!-- -DskipTests，不执行测试用例，但编译测试用例类生成相应的class文件至target/test-classes下。 -->
@@ -44,96 +44,92 @@
         <!-- Exclude all generated code -->
         <sonar.exclusions>file:**/generated-sources/**</sonar.exclusions>
 
-        <!-- 2025-05-07更新 -->
+        <!-- 2026-01-06更新 -->
         <lombok.version>1.18.38</lombok.version>
-        <junit5.version>5.12.2</junit5.version>
+        <junit5.version>6.0.1</junit5.version>
 
-        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <commons-lang3.version>3.20.0</commons-lang3.version>
         <commons-collections4.version>4.5.0</commons-collections4.version>
-        <commons-io.version>2.19.0</commons-io.version>
-        <commons-cli.version>1.9.0</commons-cli.version>
-        <commons-configuration2.version>2.12.0</commons-configuration2.version>
+        <commons-io.version>2.21.0</commons-io.version>
+        <commons-cli.version>1.11.0</commons-cli.version>
+        <commons-configuration2.version>2.13.0</commons-configuration2.version>
         <commons-math3.version>3.6.1</commons-math3.version>
-        <commons-pool2.version>2.12.1</commons-pool2.version>
-        <commons-dbcp2.version>2.13.0</commons-dbcp2.version>
+        <commons-pool2.version>2.13.1</commons-pool2.version>
+        <commons-dbcp2.version>2.14.0</commons-dbcp2.version>
         <commons-email.version>1.6.0</commons-email.version>
-        <commons-exec.version>1.4.0</commons-exec.version>
-        <commons-csv.version>1.14.0</commons-csv.version>
-        <commons-compress.version>1.27.1</commons-compress.version>
+        <commons-exec.version>1.6.0</commons-exec.version>
+        <commons-csv.version>1.14.1</commons-csv.version>
+        <commons-compress.version>1.28.0</commons-compress.version>
 
         <disruptor.version>4.0.0</disruptor.version>
         <easyexcel.version>4.0.3</easyexcel.version>
-        <guava.version>33.4.8-jre</guava.version>
-        <hutool.version>5.8.37</hutool.version>
+        <guava.version>33.5.0-jre</guava.version>
+        <hutool.version>5.8.42</hutool.version>
         <sensitive.version>1.7.0</sensitive.version>
         <hppc.version>0.10.0</hppc.version>
         <jctools.version>4.0.5</jctools.version>
         <jol.version>0.17</jol.version>
-        <oshi.version>6.8.1</oshi.version>
-        <netty.version>4.2.1.Final</netty.version>
+        <oshi.version>6.9.2</oshi.version>
+        <netty.version>4.2.9.Final</netty.version>
 
         <guice.version>7.0.0</guice.version>
         <reflections.version>0.10.2</reflections.version>
-        <asm.version>9.8</asm.version>
+        <asm.version>9.9.1</asm.version>
         <cglib.version>3.3.0</cglib.version>
         <javassist.version>3.30.2-GA</javassist.version>
-        <bytebuddy.version>1.17.5</bytebuddy.version>
+        <bytebuddy.version>1.18.3</bytebuddy.version>
 
-        <fastjson.version>2.0.57</fastjson.version>
-        <fastjson2.version>2.0.57</fastjson2.version>
-        <gson.version>2.13.1</gson.version>
+        <fastjson2.version>2.0.60</fastjson2.version>
+        <gson.version>2.13.2</gson.version>
         <json-lib.version>2.4</json-lib.version>
-        <json.version>20250107</json.version>
+        <json.version>20251224</json.version>
 
-        <dom4j.version>2.1.4</dom4j.version>
+        <dom4j.version>2.2.0</dom4j.version>
         <jdom2.version>2.0.6.1</jdom2.version>
-        <jdom.version>2.0.2</jdom.version>
 
-        <snakeyaml.version>2.4</snakeyaml.version>
+        <snakeyaml.version>2.5</snakeyaml.version>
         <jyaml.version>1.3</jyaml.version>
         <yamlbeans.version>1.17</yamlbeans.version>
 
         <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.18</logback.version>
-        <log4j.version>2.24.3</log4j.version>
+        <logback.version>1.5.23</logback.version>
+        <log4j.version>2.25.3</log4j.version>
 
-        <activemq.version>6.1.6</activemq.version>
+        <activemq.version>6.2.0</activemq.version>
         <jafka.version>3.0.6</jafka.version>
         <kafka.scala.version>2.13</kafka.scala.version>
-        <kafka.version>4.0.0</kafka.version>
-        <rabbitmq.version>5.25.0</rabbitmq.version>
-        <rocketmq.version>5.3.2</rocketmq.version>
-        <pulsar.version>4.0.4</pulsar.version>
+        <kafka.version>4.1.1</kafka.version>
+        <rabbitmq.version>5.28.0</rabbitmq.version>
+        <rocketmq.version>5.4.0</rocketmq.version>
+        <pulsar.version>4.1.2</pulsar.version>
         <openmessaging.version>2.2.1-pubsub</openmessaging.version>
 
         <cache-api.version>1.1.1</cache-api.version>
         <jetcache.version>2.7.8</jetcache.version>
-        <caffeine.version>3.2.0</caffeine.version>
+        <caffeine.version>3.2.3</caffeine.version>
         <jodis.version>0.5.1</jodis.version>
-        <ehcache.version>3.10.8</ehcache.version>
-        <hazelcast.version>5.5.0</hazelcast.version>
-        <redisson.version>3.46.0</redisson.version>
-        <jedis.version>6.0.0</jedis.version>
-        <lettuce.version>6.6.0.RELEASE</lettuce.version>
+        <ehcache.version>3.11.1</ehcache.version>
+        <hazelcast.version>5.6.0</hazelcast.version>
+        <redisson.version>4.1.0</redisson.version>
+        <jedis.version>7.2.0</jedis.version>
+        <lettuce.version>7.2.1.RELEASE</lettuce.version>
 
         <reactive.version>1.0.4</reactive.version>
-        <reactor.version>3.7.5</reactor.version>
-        <rxjava3.version>3.1.10</rxjava3.version>
+        <reactor.version>3.8.1</reactor.version>
+        <rxjava3.version>3.1.12</rxjava3.version>
 
         <!-- HTTP client-->
-        <okhttp3.version>4.12.0</okhttp3.version>
-        <unirest.version>3.14.5</unirest.version>
-        <commons-httpclient.version>3.1</commons-httpclient.version>
-        <httpclient.version>4.5.14</httpclient.version>
-        <httpclient5.version>5.4.4</httpclient5.version>
+        <okhttp3.version>5.3.2</okhttp3.version>
+        <unirest.version>4.7.0</unirest.version>
+        <httpclient5.version>5.6</httpclient5.version>
         <openfeign.version>13.6</openfeign.version>
 
-        <mysql.version>9.3.0</mysql.version>
-        <hikaricp.version>6.3.0</hikaricp.version>
-        <rocksdb.version>10.0.1</rocksdb.version>
-        <h2.version>2.3.232</h2.version>
+        <mysql.version>9.5.0</mysql.version>
+        <hikaricp.version>7.0.2</hikaricp.version>
+        <rocksdb.version>10.4.2</rocksdb.version>
+        <h2.version>2.4.240</h2.version>
         <derby.version>10.17.1.0</derby.version>
-        <sqlite.version>3.49.1.0</sqlite.version>
+        <sqlite.version>3.51.1.0</sqlite.version>
 
     </properties>
 
@@ -163,14 +159,6 @@
 
     <dependencyManagement>
         <dependencies>
-
-            <dependency>
-                <groupId>org.jdk</groupId>
-                <artifactId>tools</artifactId>
-                <version>1.8</version>
-                <scope>system</scope>
-                <systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
-            </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -352,11 +340,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson2.version}</version>
@@ -391,12 +374,6 @@
                 <groupId>org.jdom</groupId>
                 <artifactId>jdom2</artifactId>
                 <version>${jdom2.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jdom</groupId>
-                <artifactId>jdom</artifactId>
-                <version>${jdom.version}</version>
             </dependency>
 
             <dependency>
@@ -628,17 +605,17 @@
 
             <dependency>
                 <groupId>com.konghq</groupId>
-                <artifactId>unirest-java</artifactId>
+                <artifactId>unirest-java-core</artifactId>
                 <version>${unirest.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.konghq</groupId>
-                <artifactId>unirest-objectmapper-jackson</artifactId>
+                <artifactId>unirest-modules-jackson</artifactId>
                 <version>${unirest.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.konghq</groupId>
-                <artifactId>unirest-object-mappers-gson</artifactId>
+                <artifactId>unirest-modules-gson</artifactId>
                 <version>${unirest.version}</version>
             </dependency>
 
@@ -729,7 +706,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.14.0</version>
+                <version>3.14.1</version>
                 <configuration>
                     <!-- 一般而言，target与source是保持一致的，但是，有时候为了让程序能在其他版本的jdk中运行(对于低版本目标jdk，源代码中不能使用低版本jdk中不支持的语法)，会存在target不同于source的情况 -->
                     <source>${java.version}</source><!-- 源代码使用的JDK版本 -->
@@ -758,7 +735,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.14.0</version>
+                    <version>3.14.1</version>
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
@@ -786,7 +763,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.3.1</version>
+                    <version>3.4.0</version>
                     <configuration>
                         <!--            We are not suppose to setup the customer resources here-->
                         <!--            <encoding>${project.build.sourceEncoding}</encoding>-->
@@ -806,7 +783,7 @@
 
                 <plugin>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.5.0</version>
+                    <version>3.6.2</version>
                     <executions>
                         <execution>
                             <id>enforce-ban-circular-dependencies</id>
@@ -821,19 +798,12 @@
                         </rules>
                         <fail>true</fail>
                     </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>extra-enforcer-rules</artifactId>
-                            <version>1.0-beta-4</version>
-                        </dependency>
-                    </dependencies>
                 </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.5.3</version>
+                    <version>3.5.4</version>
                     <configuration>
                         <properties>
                             <property>
@@ -849,7 +819,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.4.0</version>
+                    <version>3.5.1</version>
                     <configuration>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
@@ -868,7 +838,7 @@
     </licenses>
 
     <prerequisites>
-        <maven>3.2.5</maven>
+        <maven>3.9.10</maven>
     </prerequisites>
 
     <scm>
