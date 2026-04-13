@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
         <groupId>org.apache</groupId>
@@ -44,9 +44,9 @@
         <!-- Exclude all generated code -->
         <sonar.exclusions>file:**/generated-sources/**</sonar.exclusions>
 
-        <!-- 2026-01-06更新 -->
-        <lombok.version>1.18.38</lombok.version>
-        <junit5.version>6.0.1</junit5.version>
+        <!-- 2026-04-13更新（二次校验） -->
+        <lombok.version>1.18.44</lombok.version>
+        <junit-jupiter.version>6.0.3</junit-jupiter.version>
 
         <commons-lang3.version>3.20.0</commons-lang3.version>
         <commons-collections4.version>4.5.0</commons-collections4.version>
@@ -70,16 +70,16 @@
         <jctools.version>4.0.5</jctools.version>
         <jol.version>0.17</jol.version>
         <oshi.version>6.9.2</oshi.version>
-        <netty.version>4.2.9.Final</netty.version>
+        <netty.version>4.2.12.Final</netty.version>
 
         <guice.version>7.0.0</guice.version>
         <reflections.version>0.10.2</reflections.version>
         <asm.version>9.9.1</asm.version>
         <cglib.version>3.3.0</cglib.version>
         <javassist.version>3.30.2-GA</javassist.version>
-        <bytebuddy.version>1.18.3</bytebuddy.version>
+        <bytebuddy.version>1.18.8</bytebuddy.version>
 
-        <fastjson2.version>2.0.60</fastjson2.version>
+        <fastjson2.version>2.0.61</fastjson2.version>
         <gson.version>2.13.2</gson.version>
         <json-lib.version>2.4</json-lib.version>
         <json.version>20251224</json.version>
@@ -92,14 +92,14 @@
         <yamlbeans.version>1.17</yamlbeans.version>
 
         <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.23</logback.version>
+        <logback.version>1.5.32</logback.version>
         <log4j.version>2.25.3</log4j.version>
 
         <activemq.version>6.2.0</activemq.version>
         <jafka.version>3.0.6</jafka.version>
         <kafka.scala.version>2.13</kafka.scala.version>
         <kafka.version>4.1.1</kafka.version>
-        <rabbitmq.version>5.28.0</rabbitmq.version>
+        <rabbitmq.version>5.29.0</rabbitmq.version>
         <rocketmq.version>5.4.0</rocketmq.version>
         <pulsar.version>4.1.2</pulsar.version>
         <openmessaging.version>2.2.1-pubsub</openmessaging.version>
@@ -110,12 +110,12 @@
         <jodis.version>0.5.1</jodis.version>
         <ehcache.version>3.11.1</ehcache.version>
         <hazelcast.version>5.6.0</hazelcast.version>
-        <redisson.version>4.1.0</redisson.version>
-        <jedis.version>7.2.0</jedis.version>
-        <lettuce.version>7.2.1.RELEASE</lettuce.version>
+        <redisson.version>4.3.1</redisson.version>
+        <jedis.version>7.4.0</jedis.version>
+        <lettuce.version>7.5.1.RELEASE</lettuce.version>
 
         <reactive.version>1.0.4</reactive.version>
-        <reactor.version>3.8.1</reactor.version>
+        <reactor.version>3.8.4</reactor.version>
         <rxjava3.version>3.1.12</rxjava3.version>
 
         <!-- HTTP client-->
@@ -124,7 +124,7 @@
         <httpclient5.version>5.6</httpclient5.version>
         <openfeign.version>13.6</openfeign.version>
 
-        <mysql.version>9.5.0</mysql.version>
+        <mysql.version>9.6.0</mysql.version>
         <hikaricp.version>7.0.2</hikaricp.version>
         <rocksdb.version>10.4.2</rocksdb.version>
         <h2.version>2.4.240</h2.version>
@@ -145,14 +145,14 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit5.version}</version>
+            <version>${junit-jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- 兼容junit4和junit3-->
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>${junit5.version}</version>
+            <version>${junit-jupiter.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
