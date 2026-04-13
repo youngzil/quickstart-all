@@ -95,7 +95,7 @@
         <logback.version>1.5.32</logback.version>
         <log4j.version>2.25.3</log4j.version>
 
-        <activemq.version>6.2.0</activemq.version>
+        <activemq.version>6.2.2</activemq.version>
         <jafka.version>3.0.6</jafka.version>
         <kafka.scala.version>2.13</kafka.scala.version>
         <kafka.version>4.1.1</kafka.version>
